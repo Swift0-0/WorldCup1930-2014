@@ -1,0 +1,9 @@
+SELECT
+STADIUM,
+YEAR,
+CAST(AVG(ATTENDANCE) AS INT64) AS bottom10_stadiums
+FROM
+`practice-0146.World_Cup.attendance`
+GROUP BY STADIUM,YEAR
+ORDER BY bottom10_stadiums
+LIMIT 10
