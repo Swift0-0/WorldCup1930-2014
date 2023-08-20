@@ -1,0 +1,6 @@
+SELECT
+YEAR,
+SUM(TOTALSCORE) AS total_goals
+FROM practice-0146.World_Cup.matches
+GROUP BY YEAR
+ORDER BY YEAR
