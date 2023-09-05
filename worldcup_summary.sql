@@ -1,0 +1,11 @@
+SELECT
+COUNT(DISTINCT(matches.YEAR)) AS TOTAL_WORLD_CUPS,
+COUNT(DISTINCT(HOST)) AS TOTAL_HOSTS,
+SUM(TOTALSCORE) AS TOTAL_GOALS,
+ROUND(AVG(attendance.ATTENDANCE)) AS TOTAL_AVERAGE_ATTENDANCE
+FROM
+`practice-0146.World_Cup.matches` as matches
+FULL JOIN 
+`practice-0146.World_Cup.attendance` as attendance
+ON
+matches.YEAR = attendance.GAME_ID
